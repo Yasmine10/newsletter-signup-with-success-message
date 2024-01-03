@@ -1,0 +1,58 @@
+/* --- Simple reset --- */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* --- Setup variables --- */
+
+:root {
+  --clr-primary-400: hsl(4, 100%, 67%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(231, 7%, 60%);
+  --clr-neutral-600: hsl(235, 18%, 26%);
+  --clr-neutral-800: hsl(234, 29%, 20%);
+
+  --ff: "Roboto", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-body: 1rem;
+}
+
+/* --- General styling --- */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background-color: var(--clr-neutral-100);
+}
+
+/* --- Card styling - form --- */
+
+/* --- Card styling - thank you --- */
