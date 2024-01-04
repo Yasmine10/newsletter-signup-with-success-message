@@ -112,7 +112,7 @@ body {
   color: var(--clr-neutral-100);
 }
 .btn--primary:hover,
-.btn--primary:focus {
+.btn--primary:focus-visible {
   background: linear-gradient(204deg, #FF6A3A 0%, #FF527B 100%);
   box-shadow: 0 16px 32px 0 rgba(255, 97, 85, 0.50);
 }
@@ -123,13 +123,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  position: relative;
 }
-.form-group label {
+.form-group > label {
   font-size: var(--fs-body-s);
   font-weight: var(--fw-bold);
 
 }
-.form-group input {
+.form-group > input {
   background: none;
   outline: transparent;
 
@@ -138,13 +140,29 @@ body {
   border: 1px solid hsla(243, 28%, 13%, 0.25);
   border-radius: 0.5rem;
 }
-.form-group input::placeholder {
+.form-group > input::placeholder {
   color: var(--clr-neutral-800);
   opacity: 0.5;
 }
-.form-group input:hover,
-.form-group input:focus {
+.form-group > input:hover,
+.form-group > input:focus {
   border-color: var(--clr-neutral-800);
+}
+
+.input-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-400);
+}
+
+.form.invalid input {
+  background-color: rgba(255, 97, 85, 0.15);
+  border-color: var(--clr-primary-400);
+  color: var(--clr-primary-400);
 }
 
 /* --- Card - form --- */
@@ -153,9 +171,14 @@ body {
 
 }
 
+.card--form.hidden {
+  display: none;
+}
+
 .card__content {
   padding: 2.5rem 1.5rem;
 }
+
 .card__content .info {
   display: grid;
   align-items: flex-start;
@@ -194,3 +217,10 @@ body {
 }
 
 /* --- Card - thank you --- */
+
+.card--thanks {
+
+}
+.card--thanks.hidden {
+  display: none;
+}
