@@ -16,6 +16,35 @@
     <title>Newsletter signup</title>
   </head>
   <body>
+    <h1 class="sr-only">Newsletter signup with success message</h1>
+
+    <main>
+      <div class="card card--form">
+        <picture>
+          <source srcset="./src/assets/images/illustration-sign-up-desktop.svg" media="(min-width: 48em)">
+          <img src="./src/assets/images/illustration-sign-up-mobile.svg" alt="">
+        </picture>
+        <div class="card__content">
+          <div class="info">
+            <h2 class="heading">Stay updated!</h2>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul>
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </div>
+
+          <form action="">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="email@company.com">
+            </div>
+            <button class="btn btn--primary submit" type="submit" onclick="">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+      </div>
+    </main>
 
     <script type="module" src="/main.js"></script>
   </body>
