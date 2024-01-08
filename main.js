@@ -59,13 +59,15 @@ const validateForm = (field, fieldError) => {
 const thankyouMessage = (email) => {
   main.innerHTML +=
     `
-			<div class="card--thanks">
-				<img class="thank-you-message__image" src="/src/assets/images/icon-success.svg" alt="">
-				<h2 class="thank-you-message__title">Thanks for subscribing!</h2>
-				<p class="thank-you-message__text">A confirmation email has been sent to <span>` +
+			<div class="card card--thanks">
+			  <div>
+          <img class="image" src="/src/assets/images/icon-success.svg" alt="">
+          <h2 class="title heading">Thanks for subscribing!</h2>
+          <p class="text">A confirmation email has been sent to <span>` +
     email +
     `</span>. Please open it and click the button inside to confirm your subscription</p>
-				<button type="button" class="thank-you-message__btn | btn btn--primary close">Dismiss message</button>
+        </div>
+				<button type="button" class="btn btn--primary close">Dismiss message</button>
 			</div>
 		`;
 };
